@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Oct 21 19:00:21 2019
-
-@author: Dharmendra
-"""
-
 def count_words(str):
     counts={}
     words=str.split()

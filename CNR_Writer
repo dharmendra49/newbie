@@ -1,0 +1,22 @@
+import xlsxwriter 
+  
+workbook = xlsxwriter.Workbook('Example1.xlsx') 
+worksheet = workbook.add_worksheet() 
+with open('CNR_DATA.txt') as file_obj:
+    lines=file_obj.read().split(',')  
+# Start from the first cell. 
+# Rows and columns are zero indexed. 
+row = 0
+column = 0
+
+for item in lines : 
+  
+    # write operation perform 
+    worksheet.write(row, column, item) 
+  
+    # incrementing the value of row by one 
+    # with each iteratons. 
+    row += 1
+print('done')      
+workbook.close() 
+
